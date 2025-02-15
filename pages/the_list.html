@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <!-- 2025-02-14 Fri 23:02 -->
+
+<Link href="../styles/styles.css" type="text/css"
+    rel="stylesheet" />
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Manifest(o)</title>
+<meta name="author" content="emissive" />
+<meta name="generator" content="Org Mode" />
+<style>
+  
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+    
+</head>
+<body>
+<div id="content" class="content">
+  <h1 class="title"><em>m a n i f e s t (o)</em></h1>
+    <Nav>
+      <ul>
+        <li><a href="../index.html">Main Page</a></li>
+        <li><a href="../pages/portfolio.html">Visual Art</a></li>
+        <li><a href="#">Link Hoarding</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org70f571b">1. Purpose</a>
+<ul>
+<li><a href="#orgdc0fe83">1.1. Justification</a></li>
+<li><a href="#orgeb4393b">1.2. Analysis of Circumstances</a></li>
+<li><a href="#org0fbb41b">1.3. Offering a Reason For Being</a>
+<ul>
+<li><a href="#org567dc8b">1.3.1. Providing A Logic of Love</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge571406">2. Salvation Through the Imaginal</a></li>
+<li><a href="#orgb7cc5fd">3. Art Cult</a>
+<ul>
+<li><a href="#orgaeda9ee">3.1. Purpose</a>
+<ul>
+<li><a href="#orga3dfb39">3.1.1. Justification</a></li>
+</ul>
+</li>
+<li><a href="#org8c1ab49">3.2. Metaphysics</a>
+<ul>
+<li><a href="#org560205f">3.2.1. The System</a></li>
+</ul>
+</li>
+<li><a href="#orge743c8f">3.3. Rituals</a>
+<ul>
+<li><a href="#org6428c2b">3.3.1. Initiation Ritual</a></li>
+<li><a href="#org5528f14">3.3.2. The Ritual for Channelling</a></li>
+<li><a href="#orgf6d66a2">3.3.3. The Ritual of Shared Worldbuilding</a></li>
+<li><a href="#org0083472">3.3.4. The Ritual of Inner Journeying</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org70f571b" class="outline-2">
+<h2 id="org70f571b"><span class="section-number-2">1.</span> Purpose</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This is a place for me to share the ideas that I'm considering with the people in my life
+and anyone else interested.
+</p>
+
+<p>
+When the bible opens with the passage, "In the beginning was the Word, and the Word was
+God, and the Word Is God.", what this is referring to is the process by which anything and
+everything is created, but the bible makes the mistake of assuming that the word is god,
+and not that place in/from which the word emanates." The God which is the Word is the child
+of The Great Mother, who is Emptiness, in all of her infinite manifestations, of which the
+Word is but one. The Image is another, as is The Feeling, The Impression, The Sound, and
+Awareness itself, and The Word is unique only in the fact that it is a convenient means of
+conveying the rest. The Image is more instantaneous, but isn't as preferred because it acts
+on that part of ourself which lay beyond our conscious control (and as such requires
+coaxing to understand). I have fallen in love with the Image.
+</p>
+</div>
+
+
+<div id="outline-container-orgdc0fe83" class="outline-3">
+<h3 id="orgdc0fe83"><span class="section-number-3">1.1.</span> Justification</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+I would like to offer an alternative way of approaching life, allowing for freedom in every
+moment. I want to provide a bulletproof means of escaping the trap of nihilism; I WANT TO
+HELP YOU TO FREE YOURSELF. OUR TIME IS LIMITED TO FALL IN LOVE WITH LIFE. YOUR DREAMS ARE
+POSSIBLE, BUT ONLY IF YOU ARE WILLING TO CONFRONT THE THING THAT SCARES YOU THE MOST.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb4393b" class="outline-3">
+<h3 id="orgeb4393b"><span class="section-number-3">1.2.</span> Analysis of Circumstances</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Complacency is complicity. The world is falling apart, and the single most powerful
+myth-loom has been coopted by a far-right lunatic intent on taking away the rights of
+anyone who isn't rich, white, cis, and straight, and using the machinery of government only
+for the benefit of his 'pure-blood' cohort. The wrong have proven time and again that they
+are highly effective at keeping this system running by manufacturing fear and hatred and
+desire, and that they are so good at this that they have people truly believing they are
+seeing the benefits of this system directly, even as he strips the people around them of
+their rights, drives up the cost of food, and flies completely in the face of every noble
+value upon which this country is built. This is a country of colonizing immigrants who have
+no right to control the borders of land that they stole.
+</p>
+
+<p>
+We have become so blinded to the possibilities which this world can hold for us because we
+have been fed for so long a diet of sugary gruel, making us fat, lazy, and stupid, in order
+that we will be more easily led off to a 9 to 5 slaughter which drains us of our vitality
+and our money while the wealthy continue to increase their arbitrary control over society.
+</p>
+
+<p>
+Some hope; society is entirely composed of people, which means that it's people who are
+capable of changing the way that it operates. You are a person, you are the society, and
+you can easily effect change in the world by pushing yourself and the people around you to
+do the same.
+</p>
+
+<p>
+LET LOVE WIN. For too long, the wrong have used outright lies, propaganda, and manufactured
+hatred to spread nonsense for the purposes of creating division amongst us, which prevents
+us from working together to protect our freedoms, but this TOO is a choice! Hatred is a
+choice and harm is a choice! LOVE FEELS GOOD! Why would you want to be scared all the time
+that someone is going to steal from you or rape you or take away your money or your life?
+No matter what they do, NOTHING IS WORSE THAN LIVING A MISERABLE LIFE. I would rather die
+enrapt in the overwhelming ecstacy of love than EVER BE SCARED AGAIN, and so I won't be,
+and you don't have to either! I WOULD DIE FOR THIS WORLD BECAUSE I LOVE IT! Most of my
+fondest memories aren't of wasting away between four walls while I watch the hours wash
+away what short time I have on this planet as LCDs flash, they are made of spending time in
+nature, of going on hikes, of watching the sun rise and set and settling into the
+wilderness. They are composed of sharing in imaginal experiences with the people I care
+about. Don't get me wrong, I think it's wonderful that we have gained all of this
+information that we now have access to because people loved the world around them enough to
+try to understand it, but WE TREAT THE EARTH LIKE SHIT. WE LET OUR LIVES PASS UNREMARKABLY
+WHILE WE ARE IN AN INTENTIONALLY MANUFACTURED DOPAMINE TRANCE, FEASTING ON THE CARRION OF
+IDEAS LIKE VULTURES, CAREFULLY CURATED TO STARVE US OF ANYTHING THAT WOULD PUSH US TO SEE A
+WAY OF LIVING WHICH IS APPEALING ENOUGH THAT WE WANT TO CHANGE OUR WAYS.
+</p>
+
+<p>
+IT'S ENTIRELY A CHOICE TO CONTINUE LIVING AN UNFULFILLING LIFE. If you aren't happy with
+the way you're living, it's probably because you're living in a way which is in conflict
+with the values you hold and the things that you want to achieve. We have been sold the lie
+that the only way to be happy, THE ONLY WAY TO BE SAFE (the subtext) is to CONSUME AND
+CONFORM, to strip ourselves of our ideosyncracies and our creativity, because to do
+otherwise would make you DIFFERENT (UNSAFE). They have taken us out of a world of
+possibility and innovation, where with enough effort anything is possible into one where
+there are only two states, RIGHT AND WRONG, GOOD (safe) or BAD (dangerous). Binaries are
+THE MOST POWERFUL TOOL OF OPPRESSION. Look at nature; everything exists in a spectrum of
+being, completely interreliant on everything around it. NATURE DOESN'T HAVE AN INDOORS AND
+OUTDOORS. We have been lied to! Nature is completely safe, when you are willing to be one
+with it, to learn it's ways and re-naturalize.
+</p>
+
+<p>
+The education system is designed to make us conform, not to teach us to learn. If education
+were truly about learning, then WE WOULD SHOW STUDENTS HOW TO FIND ANSWERS TO THEIR
+QUESTIONS. We wouldn't dismiss them or discourage them, because CURIOSITY IS AN EXPRESSION
+OF LOVE; TO BE CURIOUS IS TO BE IN LOVE WITH THE WORLD ENOUGH THAT YOU WANT TO KNOW
+EVERYTHING ABOUT IT, TO WANT TO UNDERSTAND IT! Instead, we show them that the only things
+they need to know are enough to get the right answers on the next test, and that after that
+it doesn't matter. THIS SHOWS YOUNG PEOPLE THAT THE ONLY THING THAT MATTERS TO LEARN IS HOW
+TO APPEASE YOUR SUPERIORS. Our country doesn't want people to be curious, because if
+they're curious, then they might start asking questions that have the possibility of
+revealing obscured information.
+</p>
+
+<p>
+THERE IS NOTHING MORE DANGEROUS THAN THE WORD 'WHY?', IT IS THE SHARPEST KNIFE WHICH HAS
+EVER BEEN INVENTED. WIELD WITH CARE.
+</p>
+
+<p>
+POWER IS CONTROLLED IN TWO WAYS: FORCE, and INFORMATION. PREVENTING OR CONTROLLING THE FLOW
+OF INFORMATION IS THE SINGLE MOST POWERFUL WAY OF KEEPING CONTROL OVER THE PEOPLE. This is
+why the internet is controlled by only a handful of companies; it makes it easy to monitor
+and easy to control the information that's provided. When the internet was first created,
+it was envisioned as a decentralized network - hence NET; each computer was a node,
+interconnected with every other computer. It should be a public service, as should
+software.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org0fbb41b" class="outline-3">
+<h3 id="org0fbb41b"><span class="section-number-3">1.3.</span> Offering a Reason For Being</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+We face a crisis of meaning in our modern society; when faced with the horrors of humanity
+and the world, the response of individuals has overwhelmingly been complacency and willful
+ignorance, or complete denial. I see this a being the result of previously created systems
+of meaning-making being inadequate at providing a helpful framework through which to
+conceptualize the massive amounts of pain which they see around them.
+</p>
+
+<p>
+The abyss is the pit of meaning, within which reason is dead.
+</p>
+
+<p>
+How then do we escape?
+</p>
+
+<p>
+Option 1: Ignorance
+</p>
+
+<p>
+Choose not to see life for the tragedy that it is; continue living your life in the way
+that you have, trying to "focus on what makes you happy".
+</p>
+
+<p>
+Option 2: Nihilism
+</p>
+
+<p>
+Witness the fact that this is all devoid of fundamental meaning. Understand that everything
+that helps us to contextualize our lives is entirely empty of anything real, as it's
+foundations are nothing more than human thoughts and memories of an approximation of an
+experience based in extremely limited information. Why even bother do anything, it isn't as
+though any of this is real anyway, it isn't as though any of this <i>matters</i>. Consider
+suicide. Understand that it wouldn't change anything at a fundamental scale; it would
+<i>only</i> effect those who care for you.
+</p>
+
+<p>
+Option 3: Buddhism
+</p>
+
+<p>
+Peer into the void; understand that there's nothing that can actually give our lives
+meaning, not even god, for (in the case that god exists) we cannot know his machinations,
+and as such they aren't useful to consider. Understand that attachment is the root of all
+suffering, and that even though our lives our an illusion, it's still a sacred illusion. It
+says that compassion is that which is the most important thing, <i>especially</i> because life
+is illusory. To understand this life to be entirely illusion is to fall in love with it
+again, as though you were a child; you have the possibility in every moment to allow it to
+be whatever it needs to be and to love <i>every single part</i> of it. You have the option to
+fight for <i>love</i>, entirely and completely, because there's nothing that matters more. To
+understand this life as an illusion makes suicide absurd; who is there to kill? What even
+is <i>killing</i>? Science tells us that all of reality is fundamentally nothing more than
+energy, so to "die" is just for there to be a re-arrangment of energy.
+</p>
+
+<p>
+If everything is just energy, and the concept of the individual is just a creation of the
+ego, then what is the point of doing anything? What is the point in <i>not</i> doing anything?
+</p>
+
+<p>
+Buddhism answers this by suggesting "setting all beings free from the cycle of
+suffering". Everything is the Buddha, everything is sacred, so everything ought to be
+treated as though it were. Essentially, there is no reason for doing anything, but if you
+really want something to work towards, have you considered making the world a better place?
+</p>
+
+<p>
+Sartre ripped 'most everything from Siddharta, though this isn't new; most all of
+'progressive' western thought is in some way either directly ripped from Buddhism, or
+retreads ground which Buddhism already has. Look at Jung; his 'collective unconscious' is
+just the 'storehouse consciousness' of Buddhism, or 'cause and effect', which is just a
+neutered version of dependant origination, and the list goes on.
+</p>
+
+<p>
+Why should we make the world a better place if the "world" isn't real?
+</p>
+
+<p>
+The simple answer is because it feels good, the longer one is that everything is buddha and
+because of this, it is in your best interest to show love towards everything and everyone
+because none of it is separate from you, so to be loving to 'others' is to be loving to
+'yourself'. 
+</p>
+
+<p>
+It seems the case that individuals who are stuck in a framework of fight/flight/complacency
+are nearly guaranteed to act only in what they think to be their best interests, which tend
+to be centred around immediate gratification as a means of regulating their psychological
+landscape enough that they can temporarily relax; the temporary distraction from the abyss
+combined with a high release of dopamine creates a quickly habituated cycle of hollow
+pleasure which is quite difficult to escape from. I would like to offer a suggestion.
+</p>
+
+<ul class="org-ul">
+<li>Mindfulness is quite exceptional for starting to re-align your being in order that you
+are no longer operating from a place of fight or flight, as well as providing a means of
+examining your actions. Continually using this tool is highly effective at allowing the
+individual to relax and to begin to understand the things that cause fear in our lives
+and to remove them.</li>
+</ul>
+
+<p>
+Additionally, imagination can serve as a means of allowing for an alternative experience of
+the world which isn't governed by the instant gratification of much of the entertainment
+which presents itself to us today. Our entire understanding of the world is imagined; a
+coherent world is structured by the mind from the raw material of our sense organs, so the
+imagination is nothing more than an extension of this ability to form coherent mental
+experiences. Not only should this ability serve as a means of structuring the world around
+us, but it ought to be brought back to being a means by which we can engage with one
+another. The current socio-economic reality is one structured upon manufacturing desire,
+but given that these objects are existing only within the imagination of the individual, it
+follows that one ought to skip the middle-man and produce what they want; landscapes of
+mind developed in order that they can be shared and frollicked within.
+</p>
+</div>
+
+
+<div id="outline-container-org567dc8b" class="outline-4">
+<h4 id="org567dc8b"><span class="section-number-4">1.3.1.</span> Providing A Logic of Love</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+This will act to provide a logical reasoning for why the individual ought to provide the
+greatest benefit in the lives of others.
+</p>
+
+<p>
+Premises
+</p>
+
+<ul class="org-ul">
+<li>You are an individual.</li>
+
+<li>Environmental stressors effect the emotional wellbeing of individuals.</li>
+
+<li>A 'Society' is formed of 'individuals', and society resides in the same biosphere.</li>
+
+<li>Individuals under environmental stress are more likely to&#x2026;
+
+<ul class="org-ul">
+<li>Perform less efficiently.</li>
+
+<li>Act in such a way that creates environmental stress, whether emotionally or physically.
+
+<ul class="org-ul">
+<li>The more stress an individual in enduring, the less conscious they are of their
+actions, their reactions, and the impact of their actions.
+
+<ul class="org-ul">
+<li>This can take a variety of forms, such as hoarding, aggressive/distracted driving,
+use of intoxicants, cruelty or disregard for people, animals, and environment,
+overconsumption, etc., and frequently these reactions occur partially because they
+create the experience of a temporary alleviation of the stress.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li>This, in turn, causes an increase in environmental stress, rippling outward amongst all
+living beings, effecting not just the human population, but the entire biosphere.</li>
+
+<li>As you, an individual, reside within this biosphere, consuming air, water, nutrients, and
+shelter directly from it to an extent wherein you are completely reliant upon it, it is
+of direct benefit to yourself to not only decrease the stressors within it, but also to
+ensure improvement. Essentially, Love thy neighbor, and understand that the buddha is in
+everything.</li>
+</ul>
+<ul class="org-ul">
+<li>The direct way to achieve this is to begin by identifying causes of <i>excess</i> environmental
+stress, and to begin to advocate and work to lower these sources of stress.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orge571406" class="outline-2">
+<h2 id="orge571406"><span class="section-number-2">2.</span> Salvation Through the Imaginal</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I believe that the next step in the evolution of humanity is going to be imaginal; people
+will no longer rely on their material possessions to determine their worth, nor will it be
+material possessions for which they strive. I provide you with this bit of reasoning;
+everything in the material world is subject to decay and destruction, and the only thing
+that can truly be brought with you are the knowledge and experience which you have gained,
+and other purviews of the mind. In addition, it it is the internal state of the individual
+which is most responsible for their life, (when their most basic needs are met) so it is of
+paramount importance to prioritize the creation of an ultimate state of being which is only
+mediated by the whims of others insofar as they reside in compassion and benefit to others.
+</p>
+
+<p>
+I envision a world where people are satisfied with their inner worlds (and the process of
+sharing them with others) to a degree where they need basically nothing exterior in their
+lives and can still find them incredibly fulfilling. I will provide an example of
+this. There is a factory worker, who lives with two other people in a house which is big
+enough to where they all have the option to spread out as much as they need to, but given
+that they have almost nothing to their names (save for a method of storing and accessing
+the worlds which they have created and the artifacts which they have created for those
+worlds) they crave for no additional space. This person has a few plants to their name, and
+their room is finely crafted yet minimal. They possess enough clothes for exactly eight
+days, and these clothes are both extremely durable and comfortable. Given the lack of
+objects, the space is easy to clean and maintain, and its spartan nature is comforting to
+its inhabitant, who finds that the lack of distractions makes it easier for them to feel at
+ease in the space. In their free time, they <i>create</i>; they spend the time they have
+building out intricate worlds and societies and architecture and experiences, and they
+share them with their roommates (who work on similar projects in their free time). Together
+they share a project, one which they have all contributed to and which they can all
+interact with. They have created characters which reside in this world, and they have taken
+the time to thoroughly customise and individualise these characters, giving them distinct
+and highly developed personalities. They have also contributed other characters to inhabit
+this world, and when it comes time for one of their characters around whom the story which
+they are collectively telling is centered decides to interact with one of these other
+'world' characters (there are then personal characters and world characters), the person
+who is responsible for creating this character takes the time to embody the personality of
+this person and engages with the other individuals in this world. Given the fact that there
+is a standardised (if flexible) set of rules by which individuals can take actions in
+other's worlds, it becomes very easy to engage with someone's world for the first time, as
+they are then responsible for determining how your engagement effects the world, and you
+are responsible for choosing the actions that you wish to take in that world. To return to
+the example, this factory worker has been spending the last couple days finely tuning the
+imagined experience of a town, which, as a result of their choice to consider the
+implications that a lack of gravity would have on the social and architectural expression
+of culture over time and the plethora of other alterations to their way of life, they go to
+their co-habitants with an explanation of the basic premise for this world, and they spend
+some time creating individuals who could believably be understood to reside within this
+culture. They spend some time exploring and creating this town and culture together, and
+they are then all left with this mental impression of this town which they can carry with
+them for the rest of their lives, which will offer them something to cconsider when they
+have a lull in their responsibilities. The most wonderful part of this is that the next day
+while the factory worker is at their job, because this is such a common practice that it
+has become second nature, this person can share in similar worlds with their co-workers,
+and as such, they are willing and excitied to go to work and to do their work (regardless
+of what it is) because it offers the opportunity to do something productive while
+simultaneously simple enough that it allows the mind time to wander and create. That day
+while they are at work, they notice that one of the machines that they are working with has
+an unintended feature of its design which makes it relatively uncomfortable to use, and
+they become interested enough with this problem that they decide to consider the problem,
+and because of this zero-gravity society which they have created for their own diversion,
+and into which they decided to pour a decent amount of research regarding the production of
+different materials and their traits under different environmental stressors), they realize
+that because of the way the material of the handle is a made from is interacting with the
+temperature accumulation in the main body of the tool, the differntial between the rate of
+expansion of the materials is causing a very gradual loosening of the binding between the
+handle and the barrel, and that this is what is causing the vibration which has begun to
+cause the tool to become noticably less comfortable to use over time. While they are not
+specialized in the field of tool design, through their own research they were able to gain
+the necessary information to diagnose the problem which faced them, and they were then able
+to pass this information on to the individual who is responsible for the provision of the
+tools, as well as a description of the specifics of the problem present within the
+object. The fact that they have generalized their studies in this way as a result of their
+interest in creating a particularly realistic world (not that this is a tendency which
+every individual prioritizes in the creation of their worlds) led to a solution to a
+problem which they would otherwise have not been able to solve were they focussed only on
+doing the bare minimum, and their transmission of this information to the people who are
+responsible for creating this tool resulted in a massive reduction to the amount of waste
+which would have been generated by the continued production of long-wear defective units,
+leading to an improvement in the quality of life for not just the production team
+responsible for creating the tool, but every individual who used those tools and in
+society, with the degree of their provided benefit increasing exponentially with every
+living being which lives during and after their time. It is in this way that every act,
+every choice, every single object brought into this world becomes something which will
+effect countless others, whether they are personally known or not. Every choice we make in
+every moment is, as a result of the chain of cause and effect, universe altering (though
+obviously to more or less subtle degrees). The choice to live in such a way which
+simultaneously maximises your potential as an individual while also limiting the ways which
+you contribute negatively is a choice which effects not only everyone you know, but also
+yourself, in that the choices yyou make alter the world, and you live in and rely on the
+world, because you are and are of the world. This is simultaneously the greatest gift and
+the greatest curse; In every moment you are taking actions which either benefit or harm the
+world, and this endows every moment with such a massive degree of power and sacredness
+which makes the profundity and meaning of your existence embedded into every moment and
+every experience, making every single individual responsible for the state of the
+world. Everything is choices, including a lack of action, including the re-inforcement of
+the status-quo through your engagement with it, leaving you personally responsible for the
+heavens and hells which you see in the lives of every entity surrounding you at every
+moment. Those choices which are the most pernicious are those which are only very slightly
+harmful but which are engaged with habitually or unconsciously, as these are the easiest to
+ignore. Habitual choices (however small) are those which become the most important, as they
+are the choices which have the greatest impact over time. For example, if you only placed
+ten bricks a day, you could build a two-thousand square foot house with eight foot tall
+walls in only seven and a half years, and would be moving twenty-seven tons of bricks in
+the process.
+</p>
+
+<p>
+This would offer the opportunity for people to create something which is both deeply
+personal and deeply fulfilling, something which engages whatever skill sets they are
+trained in, and which also would 'train' individuals' curiosity in a variety of fields, in
+addition to their creativity both within and without their chosen field of expertise. In
+addition, this would created the conditions for human beings to flourish to a degree which
+we have only begun to dream of, as the creation of these worlds would playfully train
+verbal and visual prossessing, short and long-term memory, and processing speed, causing a
+rapid evolution in the creative processing capabilities of the individuals in society,
+while providing them a way to engage with the world which is far less destructive and far
+more pleasant than the world in which we currently reside. In addition, this degree of
+creative engagement would provide individuals with the tools they need to mentally simulate
+entire societies fuctionings, and allow for them to then find more efficient and effective
+economic and interpersonal structures. The hollow materialism which is so deeply embedded
+in the western world would be given an outlet which is far less destructive and far more
+productive, as an object which exists in the mind is an object which engages the mind to a
+greater degree than a physical object necessarily might. In addition, I forsee this
+contributing to an increased rapidity in the rate of scientific and technological progress,
+as this sort of constant mental training/play would create such a robust intuitive
+understanding of the functioning of objects and systems that it would nearly inevitably
+lead to innovation. This process of tying information and ideas to mental objects will also
+lead to them being accessed with greater ease in retrieval and duration of storage, as is
+proven by the 'mental palace' of the greeks and the neuroscientific understanding that
+memory is strengthened by the number of connections that a piece of information has. By
+creating a mental object which has this information or concept embedded in it and storing
+it in a mental location with related or relevant information, this object has a minimum of
+two more connections automatically added to it (those being the created object and the
+place where it is residing), and any additional connnections would only serve to solidify
+it's reality. In addition, this process incorporates a multitude of different learning
+styles and can easily be adapted to fit the preferred learning style of an individual.
+</p>
+
+<p>
+Along these same lines, I would like to see a re-ordering of the education system to be
+more in line with the styles of learning which individuals would actually benefit from. I
+would liike to see it be the case that students are intrduced to a broad range of topics at
+the beginning of the week, and then after that they can choose one (or more) that they find
+really interesting, and do research about it and develop their skills relating to it. I
+think that this style of teaching would be particularly effective because it would give
+students something which they are interestested in engaging with, which will give them the
+skills necessary to continue learning throughout their life (as learning is something which
+is only sustained by a curiousity which can not be taught, only encouraged). In addition, I
+think that we would be very quickly surprised by the quality of the education that students
+would receive this way, as it would lead to such a generalized knowledge base that they
+would become incredibly effective, or such a specific one that the same thing would
+result. The wonderful thing about the structure of information is that it builds off other
+information, and that concepts can be traced through and sometimes applied to multiple
+areas of study, meaning that when a student would become interested in something and follow
+it, they would naturally pick up information from other disciplines, especially if they
+were frequently introduced to interesting information. This degree of novelty would lead to
+them retaining more of the information, and the passion which would result would create
+individuals who are incredibly effective at teaching themselves, which is a necessary skill
+in all areas of life, meaning that people would flourish as well-rounded. I have a really
+difficult time thinking that I'm the first person to have thought of this, (because it's
+really quite obvious) which leads me to think that this is known, but that it is not
+pursued because it would make the broader society far more difficult to subjugate. I am by
+no means the first person to have this thought, but I do genuinely think that the wealthy
+(who have money, which equals power and influence in our society) only want the broader
+public educated to a degree to where they aren't a threat to this money which they
+supposedly deserve. I think that this structure of teaching/learning could be structured
+through having professors/teachers who also have a wide knowledge base, and who are
+accessible across the board. When a student has a question that the teacher can't answer,
+they will be pointed to another teacher who has expertise in that area, and can make an
+appointment to meet with them. Students would be expected to demonstrate their learning of
+course, though this would be evaluated on a student by student basis, and could be done
+through the student producing an object or model, writing a report, giving a presentation,
+etc., the important part being that their choice in demonstrating their knowledge must be
+in a method of the student's choice. This would also solve a lot of the accessibility
+issues which education currently faces, as many of them are a result of the difficulties
+which certain students face with certain methods of demonstrating or consuming
+knowledge. While it is possible that this higher degree of individualization could create
+greater stress on the education system, that should be something that we are the least
+concerned about of any aspect of this. Education is the single most important skill, as it
+is the skill around which all others revolve, so it makes sense that it should be the
+highest investment in every country. Additionally, it would follow that this method of
+learning wherein information is encoded into objects and worlds are built might be
+encouraged, as this is something which is already present in the way that individuals
+encode information from a young age, and so it wouldn't be somtheing which is necessary to
+teach them, only to encourage.
+</p>
+
+<p>
+We also need to slow our society down. We need to return to the things that we are really
+passionate about, as a hollow drive to be a cog in the machine of 'progress' will only ever
+lead to being blindly led to your slaughter by a corporate overlord who realizes your
+obedience to the illusion of meaning which he has given you. Progress doesn't mean shit if
+people don't have a high quality of life. Progress should be oriented around improving the
+quality of life of every individual, not pushing towards profit. Why would you want any
+amount of money if you could have a life which truly meant something to you, which you were
+able to use for something that you not only believed in, but something that you actually
+found fulfilling. This way of living is something that should be available to every person
+regardless of their background, and it isn't even that difficult, because what it requires
+more than anything is other people with whom to interact, and basic needs met. We have more
+than enough to meet the basic needs of every person, and this will continue to be the case
+if we create TAKE BACK OUR POWER. The cutoff for the amount of wealth that the richest
+person in the world can have should be the GDP per person of the least wealthy country,
+BECAUSE WE ARE ALL EQUAL.
+</p>
+
+<p>
+I'm certain that with time and practice, anyone will be able to create these worlds for
+themselves, and society will transform drastically in the way that information is concieved
+of at a basic level. Gone will be the days where people talk about the weather, and come
+have the days of people discussing either the worlds that they have created with one
+another, or alone. People will be in a state of constant imagination, not because they wish
+to escape from the world or from the experience of it, but because they wish to enhance
+every facet of their experience. You can walk down the street, and it will instantly come
+alive in an infinite variety of possibilities that you have dreamed up from your own
+consciousness, and you will be able to follow any that you might wish.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgb7cc5fd" class="outline-2">
+<h2 id="orgb7cc5fd"><span class="section-number-2">3.</span> Art Cult</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgaeda9ee" class="outline-3">
+<h3 id="orgaeda9ee"><span class="section-number-3">3.1.</span> Purpose</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The guiding principle which motivates this section is one of exploring the causes of human
+motivation and orginizational tendencies, with the purpose of creating a working 'cult' for
+the production of art and various other imaginary creations, and to explore commonalities
+in art and religion. This will act as another means to ensure the creation of art, as it
+will enshrine creation as an act of servitude (as love) to the universe, to some divine
+force, for the purposes of 'salvation'. By salvation, what is intended is a re-ordering of
+the goals of the human species, that we will be shown a way towards sustainable and
+fulfilling living.
+</p>
+</div>
+
+
+<div id="outline-container-orga3dfb39" class="outline-4">
+<h4 id="orga3dfb39"><span class="section-number-4">3.1.1.</span> Justification</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc7440a8"></a>Motivation (Meaning and Suffering)<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<p>
+One of the greatest questions which human beings face is motivation. Motivating oneself to
+do things can be exceptionally difficult, but can become easier when the individual is in
+possession of a reason greater than themselves. We are facing a crisis of meaning in our
+society, and I see this as an outgrowth of a lack of percieved value and service to their
+actions and lives. Many people are able to operate at a basic level without meaning in
+their lives, but I have observed a lack of fulfillment, and a greater fracturing of the
+social structure, and I think that these are interconnected. Also at play is the
+understanding that the world is being consumed to death, which makes many with consciences
+feel that they are part of the problem, but they also don't know what they can do to
+help. These people wallow in consumption, suffering tremendously, and they have no meaning
+through which to fill the pit in their lives.
+</p>
+
+<p>
+Western culture has primarily developed around two threats; the threat of violence, and the
+threat of deprivation (though this is in many ways equally violent in its reality.) Should
+an individual choose not to conform to the rules which are set by the governing body,
+society has a (near) monopoly on the use of force. Those who choose not to conform to the
+social rules are frequently threatened with this same use of force, though not as overtly
+by the governing body as by its' constituents, of whom many are perfectly comfortable
+enforcing the status quo. This social violence can also manifest as deprivation (whether of
+opportunity, material, housing, connection, etc.), and can have results which are equally
+violent. Thus, the only way not to face this threat of violence is believed to be
+conformity to a certain socially established path of development and way of living,
+preventing the true social innovation which is required for a social evolution which is
+becoming increasingly important as the threat of global warming becomes pertinant. If there
+has ever been a time when non-conformity is important, it's now, and to a degree which is
+existential. Similarly, it seems obvious that our culture would be violent and depressed
+when the pillar upon which people are motivated to live and act is violence. Individuals
+feel like they have no power because they are unwilling to face the fact that the systems
+around them threaten their lives, as well as the fact that they have this same capacity for
+violence within them, and that they are contributors to this cruelty through their
+continued participation. People feel like they lack meaning and purpose in their lives
+because most are fundamentally compassionate in their core, and are stuck in a system which
+forces them to act in contradiction to this nature.
+</p>
+
+<p>
+The question of whether people are currently truly compassionate at their core is
+unnecessary, because if you believe that people are truly compassionate, then you will be
+truly compassionate, causing others to be compassionate. 
+</p>
+
+<p>
+It seems that there are overlapping but disparate motivators for the totality of human
+activity: suffering, and meaning.
+</p>
+
+<p>
+Meaning is understood as both understandings of signs and symbols, and as a framework for
+living formed from human reason which drives specific action.
+</p>
+
+<p>
+Suffering is understood not to be the pain which humans experience but the attachment to
+not experiencing pain, as well as the attachment to experiencing pleasure. Suffering is the
+desire for something to be different than it is, whether it be pain, a lack of pleasure, an
+excess of something, etc. This is solved in two seemingly disparate but identical ways by
+Christianity and Buddhism. In Christianity, the problem of the individual suffering is
+solved by completely giving oneself over to the care of god with absolute trust. In
+Buddhism, this is solved by understanding and releasing the origin of the suffering. Once
+the origin of the suffering is identified as the craving for something not to be the case,
+the individual can surrender the desire, and the suffering falls away, and when completely
+internalized, this expands to an understanding which leads to a similarly complete
+surrender. In the state of surrender, one lives in a complete presence, and their
+compassionate fullness is revealed.
+</p>
+</div>
+</li>
+
+
+<li><a id="org12087ce"></a>In Defence of The Religious Artistic Mode of Being<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<p>
+It has been observed that one of the best teachers of this state of surrender is the
+artistic process, so it is necessary to create a religious framework for the creation of
+art, as ritual can be exceptionally powerful at re-inforcing a state of flow in
+practitioners.
+</p>
+
+<p>
+The proof for the existence of a deity is not in the scope of this project, but it is
+necessary to explain why a deity has been included in this, as well as the framework
+through which it ought to be understood.
+</p>
+
+<p>
+The deity which this framework is included is one which both exists and does not; it will
+provide utility in life exactly proportional with belief. It exists as much as anything
+else which we interact with on a daily basis exists; it is a convenient collection of
+symbols through which to understand various states of experience, and postures for
+approaching the world, which is not representative of the true reality. Capitalism is a
+similar deity; it has certain signs, symbols, and understandings of the world which
+together constitute a way of living life, and functions as it does only because everyone
+believes it exists, yet it too is not actually representative of the true nature of
+reality.
+</p>
+
+<p>
+Imagine you have a sheet of paper. On this sheet of paper is written a promise
+that I will give you a shirt that I'm borrowing from you back, as I know how much you love
+this shirt, and that it also says that if I don't return that shirt, then you can get our
+shared neighbor to use the key he has to my house (as he sometimes comes over to water the
+plants) to either retrieve the shirt or take another similar shirt. Imagine as well that
+our shared neighbor has an incredibly strong belief in the power of promises, and you give
+him that sheet of paper (which now represents the imagined return of an object) in exchange
+for him to rake your leaves. This is how all of money works.
+</p>
+
+<p>
+Objects are abstracted into a representation of the energy (the effort applied over time),
+and this representation of the energy (which has only imagined meaning) can be exchanged
+for other objects, with the people with whom they are traded knowing that it means they
+have the imagined promise for future objects. This, like religion, only works because
+enough people believe in it.
+</p>
+
+<p>
+The Metaphysics are similar; they offer signs and symbols which provide a way of viewing
+life which is conducive to the creation of art, and are not meant to be understood as truly
+representing reality.
+</p>
+</div>
+</li>
+
+
+<li><a id="orgd3d3cb1"></a>Tidbits<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+<p>
+All art is a process of discovery, of the transformation of endless nothingness into
+something which has a degree of meaning or impression in the human mind greater than the
+original constituents required for its creation.
+</p>
+
+<p>
+We are facing a crisis in our species of our own making, and one might think that it would
+be strange for me to then suggest that more art to be created, but there is reason for
+this. People have for too long been relying on consuming other's creations, when these same
+things can feel more satisfying when engaged with in a less substantial realm, with another
+person. I have however witnessed a more powerful example of this imaginative play in
+action, and have seen that when it is distilled, and when it is supported by enough people,
+we habitually engage with it as reality.
+</p>
+
+<p>
+Additionally, art can now be made in ways with a lower environmental impact than in the
+past, and digital work could be a way to achieve this as long as we aren't relying on large
+scale computing.
+</p>
+
+<p>
+Just because everything is derived from nothingness both does and does not mean that our
+lives (and thus creation) are meaningless. This is another trap for the mind, and part of
+the reason for this projects' existence is as a means of working out of this trap.
+</p>
+
+<p>
+All creation brings the individual in touch with the vital essence of the universe, and
+although this is equally achieved through meditation, the focus of section is to explore
+the possibilities of exploring and transcending the self through work done in the context
+of sacredness.
+</p>
+
+<p>
+One of the most important things to keep in mind during the process of creation is the very
+subtle trap of attachment to the thing which is being made. Not only does this get in the
+way of continued work on a piece, but it reduces the possibilities for what the piece can
+be through the attachment to what it is. "IF YOU LOVE A SECTION OF A PAINTING, PAINT OVER
+IT". - Corey Drieth, probably from Picasso.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org8c1ab49" class="outline-3">
+<h3 id="org8c1ab49"><span class="section-number-3">3.2.</span> Metaphysics</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+All is infinite emptiness, an endless cycle of dependant manifestations of the Great
+Mother, who is at once everything and nothing, spontaneously arising and ceasinig. Her
+expanse is so truly infinite that materiality spontaneously arises, her face reflected in
+every facet. She dreampt, and multitudes opened their eyes, believing themselves
+apart. Those who can allow for spontaneous becoming without attachment are gifted her sweet
+soma, which washes the dirt from their eyes, revealing in them her infinite compassionate
+emptiness. She is the primordial artist, who has revealed the way that all has come into
+being, spontaneously. Her radiance is spontaneous creation, her light is both stone and
+paint, the world her canvas. It is by following this path that we might understand reality,
+experiencing the process of becoming through the application of mind or material for the
+creation of form.
+</p>
+
+<p>
+She who is subtle infinity,
+Clear light cast to form,
+Her blessings manifest as obliterating embrace
+In those who fall willing to her arms.
+</p>
+
+<p>
+Her peace a salve,
+Her face a spring,
+Offering endless satisfaction.
+</p>
+
+<p>
+May she shred the ropes we bind with,
+Freedom as we fall through a void
+Lit with infinite discovery.
+</p>
+
+<p>
+Worlds built reveal paths towards alternate ways of living, breaking through the illusion
+that we are trapped in only one way of being in the world, providing people with hope and
+direction towards a more sustainable culture, and the process of creating these worlds will
+show their creators the path towards understanding the nature of reality. As they become
+more effective at creating these worlds, people might come to the understanding that they
+are thus equally capable of having fabricated this entire experience of the world that they
+call 'reality', and this will show them the path towards liberation.
+</p>
+
+
+<p>
+By sitting with a wandering mind, one can begin to play and experiment, this process and
+practice becoming most healing and perfect when one approaches it with as little attachment
+to what they will create as they can possibly manage. 
+</p>
+</div>
+
+
+<div id="outline-container-org560205f" class="outline-4">
+<h4 id="org560205f"><span class="section-number-4">3.2.1.</span> The System</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+It is my understanding that the ritualization of actions in service to something percieved
+to be greater than the individual is useful for the formation of habits which result in
+continued action, because the perception of sacredness creates an experience of greater
+importance and deeper meaning.
+</p>
+
+<p>
+HOW TO BALANCE THE CRITERIA FOR THE ART WITHOUT ATTACHMENT TO MAKING ART IN THAT WAY
+</p>
+
+<p>
+There are a variety of methodologies for the production of artwork, each with varying
+degrees of reliance on the form constructing imagination present within each human being,
+and these are generally presented as follows:
+</p>
+
+<p>
+It is worth noting that each of these processes have two submethodologies, one of pure
+discovery, and one of preconception.
+</p>
+
+<ol class="org-ol">
+<li>A complete lack of visual imagination in the creation of work created directly from life
+or copied from reference. The external senses are relied upon in near entirety, and this
+approach will sometimes mix with the next approach to result in the recordings of
+internal impressions of external experiences, as seen in Mondrian, early Picasso, some
+academic art, etc.</li>
+
+<li>A near-complete lack of visual imagination in the creation of abstract artwork, with
+only general impressions of form and colour discovered in its creation.</li>
+
+<li>A relative reliance on the visual imagination for the manipulation of form referenced
+from either life or media to allow for greater accuracy in the creation of form from
+imagination. This is very effective for training the individual for the next method.</li>
+
+<li>A complete reliance on the visual imagination, with all form being discovered through
+the interaction of the individual with the materials which they are utilizing for
+creation. This can be enacted through inspiration via the creation of shapes, colours,
+or forms. This category also has varying degrees based on the amount of reliance on
+memory and previously witnessed form.</li>
+</ol>
+
+<p>
+Inspiration is both inevitable, and is frequently a mental trap used for justifying a lack
+of creation. These same categories can be applied to writing, music, math, engineering, and
+any other undertaking which results in creation. Inspiration can only find you when you're
+working.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orge743c8f" class="outline-3">
+<h3 id="orge743c8f"><span class="section-number-3">3.3.</span> Rituals</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org6428c2b" class="outline-4">
+<h4 id="org6428c2b"><span class="section-number-4">3.3.1.</span> Initiation Ritual</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Should you have access to a Resting Place, this can be used, but the important part is that
+you have somewhere to lay down for a long period of time, in which the entire self can be
+relaxed in its entirety. This place can be exposed, and it might provide a greater sense of
+surrender should it be so, but the important part is that it is emotionally comfortable.
+</p>
+
+<p>
+Ensure that the shroud is prepared, that the body is wrapped in cloth, marking the body as
+a possession of the Great Mother.
+</p>
+
+<p>
+Take the place where death is to occur, and finish covering yourself with the funerary
+shroud which has been created. Close your eyes, and begin by taking deep breaths, allowing
+them to slow down as they will, and begin to feel the embrace of the Great
+Mother. Understand that this will be the end of who you were, that everything for which you
+hoped and feared will no longer mean anything, as it will be cast into the void. As who you
+were had been, so it shall end, as all things will. As you begin to relax, start to
+visualize the space around you. Visualize wherever it is that you have chosen as your final
+resting place, and start to step outside of the body, finding your way around the space
+once you have attained a deep enough absorbtion.
+</p>
+
+<p>
+After you are comfortable with the space and the body, invite the Great Mother into the
+space through whatever means you see fit, and recite the following. 
+</p>
+
+<p>
+'I give myself over completely to you, Great Mother, who are perfect Emptiness, and pledge
+to realize your immanence. I give everything I am to you for the benefit of all sentient
+beings, that this body will become your vessel through which to show the path through
+attachment and aversion, and which will instantiate your infinite compassion for all
+sentient beings. Might those who are attached to who I believed to be myself find peace in
+truth. As the craving for the destruction of the self has been observed, so shall it come
+to pass, that a lotus might sprout.'
+</p>
+
+<p>
+Should the Great Mother of Emptiness choose to inhabit the body, watch as it becomes her
+vessel, experience it as what was your body becomes a vessel for her infinite compassion,
+and be grateful that it might be used more effectively as a means of setting sentient
+beings free from the cycle of suffering. Visualize that she takes your essense, your body,
+and all that you are, and embraces it, and as she does, see your heart stop beating, your
+lungs stop breathing, and your blood stop pumping. Allow yourself to dissolve into her
+arms, letting all experiences melt into her, understanding that as this happens, who you
+have been is now dead, and there is nothing left of who you were. Witness the body as it
+begins to decay, watch the crows as they peck through the shroud, returning the body to the
+earth, and watch as a flock leaves, the Resting Place now empty. Watch as from this
+emptiness, the body is re-woven from the emptiness, know that it is her will; watch as the
+flesh begins to take shape, and experience the Great Mother as the body is taken control
+of, though now interconnected with the entirety of existence.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5528f14" class="outline-4">
+<h4 id="org5528f14"><span class="section-number-4">3.3.2.</span> The Ritual for Channelling</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+This is to be used at the onset of work on creative projects.
+</p>
+
+<p>
+Visualize the Great Mother before you, and prostrate yourself, saying this prayer to her.
+</p>
+
+<p>
+Great Mother, who is all that is, guide this act of creation, that it might become what is
+needed to eliminate all suffering within the world. All is perfect, yet still suffering
+exists, so for compassion for all sentient beings realize an act of creation which
+causes individuals to experience and understand their true nature.
+</p>
+
+<p>
+Continue visualizing her as you say this, and offer your entire essence to her in an act of
+surrender, a reminder that it is she who is this.
+</p>
+
+<p>
+Witness her as 'yourself' as she absorbs everything you believed to be yourself, experience
+the death of the person who you took yourself to be, and feel the change as her infinite
+compassion enters the body, flowing up the spine and permeating the entirety of the flesh.
+</p>
+
+<p>
+Create.
+</p>
+
+<p>
+End with the following prayer.
+</p>
+
+<p>
+'Through the continued act of creation, all will be nourished with infinite love and
+compassion, that attachment, aversion, and ignorance will be washed away, and the
+colourless light of infinite emptiness/everythingness will be realized to permeate
+completely.'
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgf6d66a2" class="outline-4">
+<h4 id="orgf6d66a2"><span class="section-number-4">3.3.3.</span> The Ritual of Shared Worldbuilding</h4>
+<div class="outline-text-4" id="text-3-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org103eed5"></a>The Ritual Itself<br />
+<div class="outline-text-5" id="text-3-3-3-1">
+<p>
+Begin with two people, dressed in ceremonial robes, or black, whichever is more
+convenient. They are in a dark room, and they light candles.
+</p>
+
+<p>
+A cleansing ceremony takes place. This begins with rounds of deep breathing as each
+participant focuses on their breath and slowly finds their way to stillness. After a few
+minutes of this, a sound is produced.
+</p>
+
+<p>
+'We take our hopes, our fears, our attachments and our aversions, and we lay them before
+your feet, Oh Great Mother, that we might create without prejudice against the illusions
+which form our percieved selves.'
+</p>
+
+<p>
+Both parties close their eyes, and sit down. 
+</p>
+
+<p>
+At this point, both people visualize a ball of half light and half dark which they
+visualize sucking all of their hopes, fears, wishes, hatreds, and sadnesses into, and allow
+it to grow large enough to consume their bodies, sucking out all that which is the suchness
+of themselves. These spheres are given as an offering to the visualized Mother of
+Emptiness.
+</p>
+
+<p>
+'Void, your nature, sustainer of life, effective only because of your infinite
+adaptation, able to fill any form and adapt to any surrounding, providing existence through
+contrast with matter, infinite in both your stillness and your vibration, revealing form to
+be at one with you.'
+</p>
+
+<p>
+'Mother void, from whom all of reality is manifest, bless us, that we might bring worlds
+into being from nothingness. Help us both to empty ourselves that our formless essence
+might be revealed, that which you are the cause and creator of. We have given you our
+individual perspectives that we may realize the unity of our essence with all, that we may
+work as one being to create and experience this universe of our creation, such that we
+might find the perfect freedom present in spontaneous creation, gaining deeper insight into
+our true nature in the process.'
+</p>
+
+<p>
+At this point, in the forehead of the Void Mother, an eye opens, endlessly black, and from
+this eye emanates a complete void which is visualized to fill the entire space, leaving
+nothing left of the persons which previously stood there.
+</p>
+
+<p>
+'Nothing is now everything, and everything is now nothing. From this place infinite form
+inevitably manifests. Might all be nourished.'
+</p>
+
+<p>
+Now, the two individuals begin building the world, with either party speaking first when
+something appears to them, and the process continues until both sides are satisfied with
+what they have created together. To signal the end of the summoning, one party says 'It is
+so.'
+</p>
+
+<p>
+'Great Mother Void of whom this is, gratitude exists for the experience of creation. May
+this permeate all levels of existence, and set all free from the cycles of suffering.'
+</p>
+
+<p>
+The Great Mother is visualized to reveal both identical balls of light and darkness and
+fuse them, which explodes into being as both participants open their eyes.
+</p>
+
+<p>
+Perhaps at this point tea is made?
+</p>
+
+<p>
+'As this tea is in this water, so are we in the world around us; the world is us and we are
+the world.'
+</p>
+</div>
+</li>
+
+
+<li><a id="org4b29dc2"></a>A Non-ceremonialized version<br />
+<div class="outline-text-5" id="text-3-3-3-2">
+<p>
+I think it is important that I present a version of this experience which isn't within the
+confines of ritual, because I think that all of the drapery of the previous version might
+put some people off, and I think that it's important that they experience it regardless.
+</p>
+
+<p>
+Essentially, both people must agree within themselves to be vulnerable with the other, and
+not to take anything that the other person says too personally. It is easy to be offended
+by the other person not necessarily building directly off of what you try to add, or
+disregarding it, and it doesn't mean that it wasn't a good idea, nor does it mean that you
+aren't good at it. This is the whole reason why I have ritualized this; I want the people
+experiencing this process together to understand the experience not as themselves, but as
+mouthpieces for the shared font of creativity, not as individuals which can be hurt by
+anything the other does.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+
+<div id="outline-container-org0083472" class="outline-4">
+<h4 id="org0083472"><span class="section-number-4">3.3.4.</span> The Ritual of Inner Journeying</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<p>
+This ritual exists for the purposes of expanding your visualization abilities, and
+interrogating various aspects of thineself, for the purposes of knowledge and creation. As
+with all things related to the process of creation, this ought to be done with absolutely
+no judgement, lest you permanently cut yourself off from the wellspring of creation. This
+experience is initially intended to be performed alone, and only shared with people with
+whom you have complete confidance. This is to be practiced every night before finding your
+way into the gentle embrace of Mother Void, blessed be her name.
+</p>
+
+<p>
+Begin by closing your eyes.
+</p>
+
+<p>
+Complete seven triangular breathing cycles (7 seconds in, 7 second hold, 7 seconds out).
+</p>
+
+<p>
+"Great Mother Emptiness, you of infinite manifestations, who are the womb of creation,
+I ask thee to share what I need to see to aid in my development and understanding. May you
+guide me to recognize my true nature, that I might share your gifts, and help to overcome
+the cycle of suffering."
+</p>
+
+<p>
+Begin to notice what you see, whether it be blankness, swirls, colour fields, shapes, etc.,
+and start describing these out loud. Should these begin to develop into more elaborate
+scenes, describe these, and should they not, describe regardless. Should you find yourself
+in a place, describe what you see and slowly look around for anything moving. Do not, under
+any circumstances, try to change anything. Should you find something moving, slowly
+approach it if you can, and you may find this to be the beginning of a journey. The
+entities which you encounter may be rather unusual or completely ordinary, but try to avoid
+being adversarial, for they may be great sources of insight. The most important part of
+this process is patience. Try to approach everything with a casual curiosity rather than
+desire, and be content with anything which you experience.
+</p>
+
+<p>
+When performing this ritual before sleep, you can forgo the closing until the morning.
+</p>
+
+<p>
+"You of infinite manifestations, whose creations ring with the endless love of
+sponteneity, thank you for guiding me in this experience. Might I continue to be your
+faithful student, such that I might realize what I am, and use this knowledge for the
+benefit of all that exists."
+</p>
+
+<p>
+You may find that you want to record your experiences as you are having them, which is
+fine, just be sure to treat them as the sacred gifts which they are. When recording
+(whether by audio or through writing), be sure to avoid trying to edit until after your
+experience has been had.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: emissive</p>
+<p class="date">Created: 2025-02-14 Fri 23:02</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
